@@ -34,7 +34,7 @@ jobs:
         run: python main.py
         
       - name: Commit and push generated project files
-        run: |
+run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           # Add all generated files except the environment file
@@ -42,3 +42,5 @@ jobs:
           # Check if there are changes to commit before committing
           git diff --staged --quiet || git commit -m "AI Agent Workflow: Processed new project and generated reports"
           git push
+
+        
